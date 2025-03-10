@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Cookie', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff00cc, #3333ff);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: -1;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    padding: 40px;
+    width: 85%;
+    max-width: 800px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 30px;
+    border: 8px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+    animation: float 3s ease-in-out infinite;
+}
+
+h1 {
+    color: #ffd700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    font-family: 'Dancing Script', cursive;
+    font-size: 5em;
+    margin-bottom: 10px;
+}
+
+.info {
+    color: #000;
+    font-size: 1.4em;
+    margin-bottom: 40px;
+}
+
+.info-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 25px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 25px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.gender-section {
+    margin-bottom: 30px;
+}
+
+.gender-section.label {
+    padding-left: 3em;
+}
+
+.info-row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.label {
+    font-weight: bold;
+    color: #000;
+    margin-right: 16px;
+    letter-spacing: 1px;
+    font-size: 1.4em;
+}
+
+.value {
+    font-size: 1.6em;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+    margin-right: 12px;
+    line-height: 1.4;
+}
+
+.name {
+    color: #ffd700;
+}
+
+.gender,
+.age,
+.wechat {
+    font-size: 1.8em;
+    vertical-align: middle;
+}
+
+.gender {
+    color: #40e0d0;
+}
+
+.birth {
+    color: #ffc0cb;
+}
+
+.age {
+    color: #87ceeb;
+}
+
+.owner {
+    color: #40e0d0;
+}
+
+.wechat {
+    color: #ffc0cb;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.footer {
+    text-align: center;
+    color: #fff;
+    opacity: 0.9;
+    font-size: 1.4em;
+}
+
+.current-time {
+    color: #ffd700;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    font-size: 1.4em;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+   .info {
+        font-size: 1.2em;
+    }
+
+   .label {
+        font-size: 1.2em;
+    }
+
+   .value {
+        font-size: 1.4em;
+    }
+
+   .gender,
+   .age,
+   .wechat {
+        font-size: 1.6em;
+    }
+
+   .footer {
+        font-size: 1.1em;
+    }
+
+   .current-time {
+        font-size: 1.1em;
+    }
+}
+
+
